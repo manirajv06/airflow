@@ -212,6 +212,7 @@ if k8s:
 
         kube_exec_config_resource_limits = {
             "pod_override": k8s.V1Pod(
+                metadata=k8s.V1ObjectMeta(labels={"applicationId": "application-yk-0001"})
                 spec=k8s.V1PodSpec(
 		    scheduler_name="yunikorn",
                     containers=[
