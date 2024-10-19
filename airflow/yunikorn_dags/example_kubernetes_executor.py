@@ -213,6 +213,7 @@ if k8s:
         kube_exec_config_resource_limits = {
             "pod_override": k8s.V1Pod(
                 spec=k8s.V1PodSpec(
+		    schedulerName=yunikorn
                     containers=[
                         k8s.V1Container(
                             name="base",
